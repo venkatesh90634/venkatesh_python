@@ -1,0 +1,23 @@
+items={"apple":100,
+       "banana":50,
+       "papaya":30,
+       "grapes":50,
+       "mango":150}
+
+print("***welcome***")
+bill=0
+for i in items:
+    print(i,"\t RS",items[i])
+    
+try:
+    while True:
+        order = input("enter your order :")
+        order=order.lower()
+        if order =="cancel":
+            break
+        else:
+            quantity =int(input("enter your quantiy :"))
+            bill=bill+items[order]*quantity
+except:
+    print("order out of stock")
+print("Thank You & visit again,\n Total amount is ",bill)    
